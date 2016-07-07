@@ -1,0 +1,13 @@
+/vendor/*
+/config/app.php
+/tmp/*
+/logs/*
+
+# Eclipse
+.buildpath
+.project
+.settings/
+
+# macOS
+.DS_Store
+.localized
