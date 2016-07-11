@@ -1,0 +1,6 @@
+.asc:after {
+    content: " \2193";
+}
+.desc:after {
+    content: " \2191";
+}
