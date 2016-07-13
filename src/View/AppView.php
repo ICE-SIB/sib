@@ -37,5 +37,17 @@ class AppView extends View
     public function initialize()
     {
         $this->loadHelper('Paginator', ['templates' => 'paginator']);
+        
+        $this->Form->templates([
+            'formStart' => '<form role="form" {{attrs}}><div class="form-group">',
+            'formEnd' => '</div></form>',
+            'select' => '<select class="form-control" name="{{name}}"{{attrs}}>{{content}}</select>',
+            'label' => '<label class="control-label" {{attrs}}>{{text}}</label>',
+            'input' => '<input class="form-control" type="{{type}}" name="{{name}}"{{attrs}}/>',
+            'inputSubmit' => '<input class="btn btn-primary btn-block" type="{{type}}"{{attrs}}/>',
+            'inputContainer' => '<div class="form-group">{{content}}</div>',
+            'inputContainerError' => '<div class="form-group has-error" aria-describedby="helpBlock">{{content}}{{error}}</div>',
+            'error' => '<span id="helpBlock" class="help-block">{{content}}</span>'
+        ]);
     }
 }
