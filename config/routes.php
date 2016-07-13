@@ -74,6 +74,14 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->fallbacks('DashedRoute');
 });
 
+Router::scope('/login', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
+});
+
+Router::scope('/logout', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'logout']);
+});
+
 /**
  * Load all plugin routes.  See the Plugin documentation on
  * how to customize the loading of plugin routes.
