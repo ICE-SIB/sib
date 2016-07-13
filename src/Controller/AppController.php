@@ -43,6 +43,13 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'authorize'=> 'Controller',
+            'authError' => false,
+            'unauthorizedRedirect' => ['controller' => 'Pages', 'action' => 'display', 'home'],
+            'loginRedirect' => ['controller' => 'Pages', 'action' => 'display', 'home'],
+            ['className' => 'Storage', 'key' => 'Auth.User']
+        ]);
     }
 
     /**
@@ -58,5 +65,23 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+    }
+    
+    public function beforeFilter(Event $event) {       
+        $user = [
+            'user_id' => $this->Auth->user('id'),
+            'user_username' => $this->Auth->user('username'),
+            'user_fullname' => "{$this->Auth->user('first_name')} {$this->Auth->user('last_name')}"
+        ];
+        $this->set($user);        
+        parent::beforeFilter($event);
+    }
+    
+    public function isAuthorized($user = null) { 
+        if ($user['role'] === 'a')
+            return true;
+        
+        $this->Flash->error(__('Unauthorized access.'));
+        return false;
     }
 }
