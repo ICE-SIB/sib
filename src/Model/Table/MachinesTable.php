@@ -5,6 +5,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Search\Manager;
 
 /**
  * Machines Model
@@ -33,6 +34,20 @@ class MachinesTable extends Table
     {
         parent::initialize($config);
 
+        $this->addBehavior('Search.Search');
+        
+        $this->searchManager()
+        ->value('asset_number')
+        ->add('q', 'Search.Like', [
+        		'before' => true,
+        		'after' => true,
+        		'mode' => 'or',
+        		'comparison' => 'ILIKE',
+        		'wildcardAny' => '*',
+        		'wildcardOne' => '?',
+        		'field' => ['Warehouses.project_name', 'name']
+        ]);
+        
         $this->table('machines');
         $this->displayField('name');
         $this->primaryKey('id');
@@ -59,14 +74,18 @@ class MachinesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->integer('code')
-            ->requirePresence('code', 'create')
-            ->notEmpty('code')
-            ->add('code', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
-
-        $validator
             ->requirePresence('name', 'create')
             ->notEmpty('name');
+
+        $validator
+            ->integer('asset_number')
+            ->requirePresence('asset_number', 'create')
+            ->notEmpty('asset_number')
+            ->add('asset_number', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+
+        $validator
+            ->requirePresence('rate_type', 'create')
+            ->notEmpty('rate_type');
 
         $validator
             ->boolean('is_active')
@@ -88,8 +107,16 @@ class MachinesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['code']));
+        $rules->add($rules->isUnique(['asset_number']));
         $rules->add($rules->existsIn(['warehouse_id'], 'Warehouses'));
+
         return $rules;
+    }
+    
+    public function getAvailableRateTypes() {
+    	return [
+    		'h' => __('Hourly'),
+    		'd' => __('Daily')
+    	];
     }
 }

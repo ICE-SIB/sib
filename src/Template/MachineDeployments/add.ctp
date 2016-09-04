@@ -6,11 +6,9 @@ echo $this->Form->create($machineDeployment);
 <h1><?= __('New Machine Deployment') ?></h1>   
 <?php   
 echo $this->Form->input('machine_id', ['options' => $machines]);
-echo $this->Form->input('from_warehouse', ['options' => $origins]);
 echo $this->Form->input('to_warehouse', ['options' => $destinations]);
 echo $this->Form->input('responsible');
 echo $this->Form->input('management_center');
-echo $this->Form->input('rate_type', ['options' => $available_rate_type]);
 echo $this->Form->input('service_order');
 echo $this->Form->button(__("Submit"), ['class' => 'btn-primary btn-block']);
 echo $this->Form->end();

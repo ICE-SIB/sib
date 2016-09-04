@@ -29,10 +29,6 @@ $this->Html->addCrumb(h($machineDeployment->title));
         <td><?= h($machineDeployment->management_center) ?></td>
     </tr>
     <tr>
-        <th><?= __('Rate Type') ?></th>
-        <td><?= h($machineDeployment->rate_type_label) ?></td>
-    </tr>
-    <tr>
         <th><?= __('Service Order') ?></th>
         <td><?= h($machineDeployment->service_order) ?></td>
     </tr>

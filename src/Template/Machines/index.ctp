@@ -1,4 +1,5 @@
 <?php $this->Html->addCrumb(__('Machines')); ?>
+
 <div class="row">
 	<div class="col-md-3">
 		<div class="panel panel-default">
@@ -13,6 +14,16 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+
+		<?= $this->Form->create() ?>
+		<?= $this->Form->input('asset_number') ?>
+		<?= $this->Form->input('q', ['label' => _('Name - Project')]) ?>
+		<?= $this->Form->button(_('Search'), ['class' => 'btn-primary']) ?>
+		<?= $this->Html->link(_('Reset'), ['action' => 'index']) ?>
+		<?= $this->Form->end() ?>
+		
+		<br>
+
 		<div class="panel panel-default">
 			<div class="panel-heading">
     			<h1 class="panel-title"><?= __('Machines') ?></h3>
@@ -21,19 +32,21 @@
 				<table class="table table-hover">
 					<thead>
 					    <tr>
-					    	<th><?= $this->Paginator->sort('name') ?></th>
-					    	<th><?= $this->Paginator->sort('code') ?></th>
-                			<th><?= $this->Paginator->sort('warehouse_id') ?></th>
-                			<th><?= $this->Paginator->sort('is_active') ?></th>
+					    	<th><?= $this->Paginator->sort('warehouse_id') ?></th>
+			                <th><?= $this->Paginator->sort('name') ?></th>
+			                <th><?= $this->Paginator->sort('asset_number') ?></th>
+			                <th><?= $this->Paginator->sort('rate_type') ?></th>
+			                <th><?= $this->Paginator->sort('is_active') ?></th>
                 			<th><?= __('Actions') ?></th>
 					    </tr>
 					</thead>
 					<tbody>
 					    <?php foreach ($machines as $machine): ?>
 					    <tr>
-                			<td><?= h($machine->name) ?></td>
-                			<td><?= h($machine->code) ?></td>	
-                			<td><?= $machine->has('warehouse') ? $this->Html->link($machine->warehouse->project_name, ['controller' => 'Warehouses', 'action' => 'view', $machine->warehouse->id]) : '' ?></td>
+			                <td><?= $machine->has('warehouse') ? $this->Html->link($machine->warehouse->project_name, ['controller' => 'Warehouses', 'action' => 'view', $machine->warehouse->id]) : '' ?></td>
+			                <td><?= h($machine->name) ?></td>
+			                <td><?= h($machine->asset_number) ?></td>
+			                <td><?= h($machine->rate_type_label) ?></td>
 					        <td><?= $machine->is_active ? __('Yes') : __('No'); ?></td>
 					        <td>
 					            <?= $this->Html->link('', ['action' => 'view', $machine->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>

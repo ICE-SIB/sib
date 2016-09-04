@@ -13,7 +13,6 @@ use Cake\ORM\Entity;
  * @property int $to_warehouse
  * @property string $responsible
  * @property string $management_center
- * @property string $rate_type
  * @property string $service_order
  * @property \Cake\I18n\Time $datetime
  *

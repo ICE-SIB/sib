@@ -221,3 +221,5 @@ Type::build('datetime')
     ->useImmutable();
 
 Plugin::load('BootstrapUI');
+
+Plugin::load('Search');

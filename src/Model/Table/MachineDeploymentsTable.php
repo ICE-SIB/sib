@@ -70,6 +70,11 @@ class MachineDeploymentsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->integer('machine_id')
+            ->requirePresence('machine_id', 'create')
+            ->notEmpty('machine_id');
+            
+        $validator
             ->integer('from_warehouse')
             ->requirePresence('from_warehouse', 'create')
             ->notEmpty('from_warehouse');
@@ -77,12 +82,7 @@ class MachineDeploymentsTable extends Table
         $validator
             ->integer('to_warehouse')
             ->requirePresence('to_warehouse', 'create')
-            ->notEmpty('to_warehouse')
-            ->add('to_warehouse', 'valid_destination', [
-                'rule' => function ($value, $context) {	
-                    $origin = $context['data']['from_warehouse'];
-                    return $value === $origin ? false : true;
-                }, 'message' => __('The destination must be different from the origin')]);
+            ->notEmpty('to_warehouse');
             
         $validator
             ->requirePresence('responsible', 'create')
@@ -91,10 +91,6 @@ class MachineDeploymentsTable extends Table
         $validator
             ->requirePresence('management_center', 'create')
             ->notEmpty('management_center');
-
-        $validator
-            ->requirePresence('rate_type', 'create')
-            ->notEmpty('rate_type');
 
         $validator
             ->requirePresence('service_order', 'create')
