@@ -71,7 +71,8 @@ class AppController extends Controller
         $user = [
             'user_id' => $this->Auth->user('id'),
             'user_username' => $this->Auth->user('username'),
-            'user_fullname' => "{$this->Auth->user('first_name')} {$this->Auth->user('last_name')}"
+            'user_fullname' => "{$this->Auth->user('first_name')} {$this->Auth->user('last_name')}",
+            'user_role' => $this->Auth->user('role')
         ];
         $this->set($user);        
         parent::beforeFilter($event);
