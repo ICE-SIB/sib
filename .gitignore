@@ -13,4 +13,4 @@
 .localized
 
 # gettext
-.mo
+*.mo

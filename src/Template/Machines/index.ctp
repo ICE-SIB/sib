@@ -18,8 +18,8 @@
 		<?= $this->Form->create() ?>
 		<?= $this->Form->input('asset_number') ?>
 		<?= $this->Form->input('q', ['label' => _('Name - Project')]) ?>
-		<?= $this->Form->button(_('Search'), ['class' => 'btn-primary']) ?>
-		<?= $this->Html->link(_('Reset'), ['action' => 'index']) ?>
+		<?= $this->Form->button(__('Search'), ['class' => 'btn-primary']) ?>
+		<?= $this->Html->link(__('Reset'), ['action' => 'index']) ?>
 		<?= $this->Form->end() ?>
 		
 		<br>

@@ -79,12 +79,12 @@ class MachineDeploymentsController extends AppController {
             
             try {
                 if ($machineDeployment->errors())
-                    throw new ErrorException('The machine deployment could not be saved. Please, try again.');
+                    throw new ErrorException(__('The machine deployment could not be saved. Please, try again.'));
                 else {
                     if ($machineDeployment->from_warehouse === $machineDeployment->to_warehouse)
-                        throw new ErrorException('This machine is already in that location.');
+                        throw new ErrorException(__('This machine is already in that location.'));
                     if ($machine->is_active)
-                        throw new ErrorException('This machine is currently in use.');
+                        throw new ErrorException(__('This machine is currently in use.'));
                     else {
                         $connection = ConnectionManager::get('default');
                         $machine->is_active = true;
