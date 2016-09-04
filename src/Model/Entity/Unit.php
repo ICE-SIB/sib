@@ -4,17 +4,15 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Material Entity
+ * Unit Entity
  *
  * @property int $id
- * @property int $code
  * @property string $name
- * @property int $unit_id
+ * @property string $symbol
  *
- * @property \App\Model\Entity\Unit $unit
- * @property \App\Model\Entity\Inventory[] $inventories
+ * @property \App\Model\Entity\Material[] $materials
  */
-class Material extends Entity
+class Unit extends Entity
 {
 
     /**
@@ -30,4 +28,9 @@ class Material extends Entity
         '*' => true,
         'id' => false
     ];
+    
+    protected function _getFullName()
+    {
+    	return "$this->name ($this->symbol)";
+    }
 }

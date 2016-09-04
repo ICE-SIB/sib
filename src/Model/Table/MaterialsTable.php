@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Materials Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Units
  * @property \Cake\ORM\Association\HasMany $Inventories
  *
  * @method \App\Model\Entity\Material get($primaryKey, $options = [])
@@ -36,6 +37,10 @@ class MaterialsTable extends Table
         $this->displayField('name');
         $this->primaryKey('id');
 
+        $this->belongsTo('Units', [
+            'foreignKey' => 'unit_id',
+            'joinType' => 'INNER'
+        ]);
         $this->hasMany('Inventories', [
             'foreignKey' => 'material_id'
         ]);
@@ -63,10 +68,6 @@ class MaterialsTable extends Table
             ->requirePresence('name', 'create')
             ->notEmpty('name');
 
-        $validator
-            ->requirePresence('unit_type', 'create')
-            ->notEmpty('unit_type');
-
         return $validator;
     }
 
@@ -80,16 +81,8 @@ class MaterialsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->isUnique(['code']));
+        $rules->add($rules->existsIn(['unit_id'], 'Units'));
+
         return $rules;
-    }
-    
-    public function getUnits() {
-        $query = $this->find()
-        ->distinct('unit_type');
-        
-        $units = array();
-        foreach ($query as $row)
-            array_push($units, $row->unit_type);
-        return $units;
     }
 }

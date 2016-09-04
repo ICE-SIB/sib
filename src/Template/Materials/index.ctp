@@ -19,23 +19,22 @@
 				<table class="table table-hover">
 					<thead>
 					    <tr>
-					    	<th><?= $this->Paginator->sort('name') ?></th>
-                			<th><?= $this->Paginator->sort('code') ?></th>               			
-                			<th><?= $this->Paginator->sort('unit_type') ?></th>
+			                <th><?= $this->Paginator->sort('code') ?></th>
+			                <th><?= $this->Paginator->sort('name') ?></th>
+			                <th><?= $this->Paginator->sort('unit_id') ?></th>
                 			<th class="actions"><?= __('Actions') ?></th>
 					    </tr>
 					</thead>
 					<tbody>
 					    <?php foreach ($materials as $material): ?>
 					    <tr>
-                			<td><?= h($material->name) ?></td>
-                			<td><?= h($material->code) ?></td>
-                			<td><?= h($material->unit_type) ?></td>
-					        <td>
-					            <?= $this->Html->link('', ['action' => 'view', $material->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
+			                <td><?= h($material->code) ?></td>
+			                <td><?= h($material->name) ?></td>
+			                <td><?= $material->has('unit') ? $material->unit->symbol : '' ?></td>
+			                <td class="actions">
+			                    <?= $this->Html->link('', ['action' => 'view', $material->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
 					            <?= $this->Html->link('', ['action' => 'edit', $material->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-					            <?= $this->Form->postLink('', ['action' => 'delete', $material->id], ['confirm' => __('Are you sure you want to delete # {0}?', $material->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
-					        </td>
+			                </td>
 					    </tr>
 					</tbody>
 				    <?php endforeach; ?>

@@ -20,18 +20,14 @@
 	    	<tr>
             	<th><?= __('Name') ?></th>
             	<td><?= h($material->name) ?></td>
-        	</tr>
-	        <tr>
-	            <th><?= __('Unit Type') ?></th>
-	            <td><?= h($material->unit_type) ?></td>
 	        </tr>
 	        <tr>
-	            <th><?= __('Id') ?></th>
-	            <td><?= $this->Number->format($material->id) ?></td>
+	            <th><?= __('Unit') ?></th>
+	            <td><?= $material->has('unit') ? $material->unit->symbol : '' ?></td>
 	        </tr>
 	        <tr>
 	            <th><?= __('Code') ?></th>
-	            <td><?= $this->Number->format($material->code) ?></td>
+	            <td><?= h($material->code) ?></td>
 	        </tr>
 	    </table>
 	</div>

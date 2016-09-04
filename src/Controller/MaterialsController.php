@@ -18,6 +18,9 @@ class MaterialsController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Units']
+        ];
         $materials = $this->paginate($this->Materials);
 
         $this->set(compact('materials'));
@@ -34,7 +37,7 @@ class MaterialsController extends AppController
     public function view($id = null)
     {
         $material = $this->Materials->get($id, [
-            'contain' => ['Inventories']
+            'contain' => ['Units', 'Inventories']
         ]);
 
         $this->set('material', $material);
@@ -53,12 +56,14 @@ class MaterialsController extends AppController
             $material = $this->Materials->patchEntity($material, $this->request->data);
             if ($this->Materials->save($material)) {
                 $this->Flash->success(__('The material has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The material could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('material'));
+        $units = $this->Materials->Units->find('list', ['limit' => 200]);
+        $this->set(compact('material', 'units'));
         $this->set('_serialize', ['material']);
     }
 
@@ -78,31 +83,14 @@ class MaterialsController extends AppController
             $material = $this->Materials->patchEntity($material, $this->request->data);
             if ($this->Materials->save($material)) {
                 $this->Flash->success(__('The material has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             } else {
                 $this->Flash->error(__('The material could not be saved. Please, try again.'));
             }
         }
-        $this->set(compact('material'));
+        $units = $this->Materials->Units->find('list', ['limit' => 200]);
+        $this->set(compact('material', 'units'));
         $this->set('_serialize', ['material']);
-    }
-
-    /**
-     * Delete method
-     *
-     * @param string|null $id Material id.
-     * @return \Cake\Network\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function delete($id = null)
-    {
-        $this->request->allowMethod(['post', 'delete']);
-        $material = $this->Materials->get($id);
-        if ($this->Materials->delete($material)) {
-            $this->Flash->success(__('The material has been deleted.'));
-        } else {
-            $this->Flash->error(__('The material could not be deleted. Please, try again.'));
-        }
-        return $this->redirect(['action' => 'index']);
     }
 }

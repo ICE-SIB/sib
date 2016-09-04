@@ -18,9 +18,9 @@
 		<?= $this->Form->create($material) ?>
 	    <h1><?= __('Edit Material') ?></h1>
 	    <?php
-	    echo $this->Form->input('name');
-    	echo $this->Form->input('code');       
-        echo $this->Form->input('unit_type');
+	    echo $this->Form->input('code');
+        echo $this->Form->input('name');
+        echo $this->Form->input('unit_id', ['options' => $units]);
         echo $this->Form->button(__("Submit"), ['class' => 'btn-primary btn-block']);
 		echo $this->Form->end();
 		?>
