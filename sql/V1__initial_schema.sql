@@ -1,5 +1,3 @@
-DROP TABLE IF EXISTS inventories, materials, deposits, withdrawals, machine_deployments, machines, warehouses, users;
-
 CREATE TABLE public.warehouses (
     id serial PRIMARY KEY,
     project_name varchar NOT NULL
