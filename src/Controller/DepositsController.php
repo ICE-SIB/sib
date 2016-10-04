@@ -71,4 +71,12 @@ class DepositsController extends AppController
         $this->set(compact('deposit', 'users', 'inventories'));
         $this->set('_serialize', ['deposit']);
     }
+
+    public function isAuthorized($user = null) {
+    	 
+    	if (in_array($this->request['action'], ['add']) && $user['role'] === 'e')
+    		return parent::isAuthorized($user);
+    	else
+    		return true;
+    }
 }

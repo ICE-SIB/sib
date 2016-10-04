@@ -1,6 +1,8 @@
 <?php $this->Html->addCrumb(__('Machines')); ?>
 
 <div class="row">
+
+<?php if ($user_role !== 'e'): ?>
 	<div class="col-md-3">
 		<div class="panel panel-default">
   			<div class="panel-heading">
@@ -14,10 +16,13 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+<?php else: ?>
+	<div class="col-md-12">
+<?php endif; ?>
 
 		<?= $this->Form->create() ?>
 		<?= $this->Form->input('asset_number') ?>
-		<?= $this->Form->input('q', ['label' => _('Name - Project')]) ?>
+		<?= $this->Form->input('q', ['label' => __('Name - Project')]) ?>
 		<?= $this->Form->button(__('Search'), ['class' => 'btn-primary']) ?>
 		<?= $this->Html->link(__('Reset'), ['action' => 'index']) ?>
 		<?= $this->Form->end() ?>
@@ -50,7 +55,9 @@
 					        <td><?= $machine->is_active ? __('Yes') : __('No'); ?></td>
 					        <td>
 					            <?= $this->Html->link('', ['action' => 'view', $machine->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-					            <?= $this->Html->link('', ['action' => 'edit', $machine->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					            <?php if ($user_role !== 'e'): ?>
+					            	<?= $this->Html->link('', ['action' => 'edit', $machine->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					        	<?php endif; ?>
 					        </td>
 					    </tr>
 					</tbody>

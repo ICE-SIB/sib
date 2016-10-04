@@ -71,4 +71,12 @@ class WithdrawalsController extends AppController
         $this->set(compact('withdrawal', 'users', 'inventories'));
         $this->set('_serialize', ['withdrawal']);
     }
+   
+    public function isAuthorized($user = null) {
+    
+    	if (in_array($this->request['action'], ['add']) && $user['role'] === 'e')
+    		return parent::isAuthorized($user);
+    		else
+    			return true;
+    }
 }

@@ -1,5 +1,6 @@
 <?php $this->Html->addCrumb(__('Deposits')); ?>
 <div class="row">
+<?php if ($user_role !== 'e'): ?>
 	<div class="col-md-3">
 		<div class="panel panel-default">
   			<div class="panel-heading">
@@ -13,6 +14,9 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+<?php else: ?>
+	<div class="col-md-12">
+<?php endif; ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
     			<h1 class="panel-title"><?= __('Deposits') ?></h3>

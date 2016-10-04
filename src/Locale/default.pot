@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-09-04 07:59+0000\n"
+"POT-Creation-Date: 2016-10-04 04:43+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/AppController.php:85
+#: Controller/AppController.php:86
 msgid "Unauthorized access."
 msgstr ""
 
@@ -182,10 +182,10 @@ msgstr ""
 #: Template/Inventories/index.ctp:6
 #: Template/Inventories/view.ctp:7
 #: Template/MachineDeployments/index.ctp:6
-#: Template/Machines/index.ctp:7
+#: Template/Machines/index.ctp:9
 #: Template/Machines/view.ctp:7
 #: Template/Materials/edit.ctp:8
-#: Template/Materials/index.ctp:6
+#: Template/Materials/index.ctp:7
 #: Template/Materials/view.ctp:7
 #: Template/Users/edit.ctp:8
 #: Template/Users/index.ctp:6
@@ -229,8 +229,8 @@ msgstr ""
 
 #: Template/Inventories/index.ctp:32
 #: Template/MachineDeployments/index.ctp:30
-#: Template/Machines/index.ctp:40
-#: Template/Materials/index.ctp:25
+#: Template/Machines/index.ctp:45
+#: Template/Materials/index.ctp:29
 #: Template/Users/index.ctp:28
 #: Template/Warehouses/index.ctp:25
 msgid "Actions"
@@ -238,16 +238,16 @@ msgstr ""
 
 #: Template/Inventories/index.ctp:47
 #: Template/MachineDeployments/index.ctp:43
-#: Template/Machines/index.ctp:52
-#: Template/Materials/index.ctp:35
+#: Template/Machines/index.ctp:57
+#: Template/Materials/index.ctp:39
 #: Template/Users/index.ctp:39
 #: Template/Warehouses/index.ctp:33
 msgid "View"
 msgstr ""
 
 #: Template/Inventories/index.ctp:48
-#: Template/Machines/index.ctp:53
-#: Template/Materials/index.ctp:36
+#: Template/Machines/index.ctp:59
+#: Template/Materials/index.ctp:41
 #: Template/Users/index.ctp:40
 #: Template/Warehouses/index.ctp:34
 msgid "Edit"
@@ -347,14 +347,14 @@ msgstr ""
 
 #: Template/Machines/add.ctp:1
 #: Template/Machines/edit.ctp:1
-#: Template/Machines/index.ctp:1;29
+#: Template/Machines/index.ctp:1;34
 #: Template/Machines/view.ctp:1
 #: Template/Pages/home.ctp:8
 msgid "Machines"
 msgstr ""
 
 #: Template/Machines/add.ctp:2;4
-#: Template/Machines/index.ctp:11
+#: Template/Machines/index.ctp:13
 msgid "New Machine"
 msgstr ""
 
@@ -363,20 +363,24 @@ msgstr ""
 msgid "Edit Machine"
 msgstr ""
 
-#: Template/Machines/index.ctp:21
+#: Template/Machines/index.ctp:25
+msgid "Name - Project"
+msgstr ""
+
+#: Template/Machines/index.ctp:26
 msgid "Search"
 msgstr ""
 
-#: Template/Machines/index.ctp:22
+#: Template/Machines/index.ctp:27
 msgid "Reset"
 msgstr ""
 
-#: Template/Machines/index.ctp:50
+#: Template/Machines/index.ctp:55
 #: Template/Machines/view.ctp:37
 msgid "Yes"
 msgstr ""
 
-#: Template/Machines/index.ctp:50
+#: Template/Machines/index.ctp:55
 #: Template/Machines/view.ctp:37
 msgid "No"
 msgstr ""
@@ -424,13 +428,13 @@ msgstr ""
 
 #: Template/Materials/add.ctp:1
 #: Template/Materials/edit.ctp:1
-#: Template/Materials/index.ctp:1;16
+#: Template/Materials/index.ctp:1;20
 #: Template/Pages/home.ctp:7
 msgid "Materials"
 msgstr ""
 
 #: Template/Materials/add.ctp:2;4
-#: Template/Materials/index.ctp:10
+#: Template/Materials/index.ctp:11
 msgid "New Material"
 msgstr ""
 

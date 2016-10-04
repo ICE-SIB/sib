@@ -94,4 +94,12 @@ class InventoriesController extends AppController
         $this->set(compact('inventory', 'materials', 'warehouses'));
         $this->set('_serialize', ['inventory']);
     }
+    
+    public function isAuthorized($user = null) {
+    	 
+    	if (in_array($this->request['action'], ['add', 'edit']) && $user['role'] === 'e')
+    		return parent::isAuthorized($user);
+    	else		
+    		return true;
+    }
 }

@@ -1,5 +1,6 @@
 <?php $this->Html->addCrumb(__('Inventories')); ?>
 <div class="row">
+<?php if ($user_role !== 'e'): ?>
 	<div class="col-md-3">
 		<div class="panel panel-default">
   			<div class="panel-heading">
@@ -13,6 +14,9 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+<?php else: ?>
+	<div class="col-md-12">
+<?php endif; ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
     			<h1 class="panel-title"><?= __('Inventories') ?></h3>
@@ -45,7 +49,9 @@
 			                <td><?= h($inventory->platter) ?></td>
 					        <td>
 					            <?= $this->Html->link('', ['action' => 'view', $inventory->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-					            <?= $this->Html->link('', ['action' => 'edit', $inventory->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					            <?php if ($user_role === 'a'): ?>
+					            	<?= $this->Html->link('', ['action' => 'edit', $inventory->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					        	<?php endif; ?>
 					        </td>
 					    </tr>
 					</tbody>

@@ -79,10 +79,12 @@ class AppController extends Controller
     }
     
     public function isAuthorized($user = null) { 
-        if ($user['role'] === 'a')
+    	
+        if ($user['role'] === 'a') // only administrators have access (by default)
             return true;
-        
-        $this->Flash->error(__('Unauthorized access.'));
-        return false;
+        else {
+        	$this->Flash->error(__('Unauthorized access.'));
+        	return false;
+        }  
     }
 }

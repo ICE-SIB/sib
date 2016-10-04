@@ -117,4 +117,12 @@ class MachinesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function isAuthorized($user = null) {
+    	
+    	if (in_array($this->request['action'], ['add', 'edit', 'delete']) && $user['role'] === 'e')
+    		return parent::isAuthorized($user);
+    	else
+    		return true;
+    }
 }

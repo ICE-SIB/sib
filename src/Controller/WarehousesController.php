@@ -105,4 +105,12 @@ class WarehousesController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    
+    public function isAuthorized($user = null) {
+    	 
+    	if (in_array($this->request['action'], ['index', 'view']))
+    		return true;
+    	else
+    		return parent::isAuthorized($user);
+    }
 }

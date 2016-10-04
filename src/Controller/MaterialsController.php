@@ -93,4 +93,12 @@ class MaterialsController extends AppController
         $this->set(compact('material', 'units'));
         $this->set('_serialize', ['material']);
     }
+    
+    public function isAuthorized($user = null) {
+    	 
+    	if (in_array($this->request['action'], ['add', 'edit']) && $user['role'] === 'e')
+    		return parent::isAuthorized($user);
+    	else
+    		return true;
+    }
 }

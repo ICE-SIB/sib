@@ -1,5 +1,6 @@
 <?php $this->Html->addCrumb(__('Warehouses')); ?>
 <div class="row">
+<?php if ($user_role === 'a'): ?>
 	<div class="col-md-3">
 		<div class="panel panel-default">
   			<div class="panel-heading">
@@ -7,12 +8,15 @@
   			</div>
   			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"><?= $this->Html->link(__('New Warehouse'), ['action' => 'add']) ?></li>
+					<li role="presentation"><?= $this->Html->link(__('New Material'), ['action' => 'add']) ?></li>
 				</ul>
  			</div>
 		</div>
 	</div>
 	<div class="col-md-9">
+<?php else: ?>
+	<div class="col-md-12">
+<?php endif; ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">
     			<h1 class="panel-title"><?= __('Warehouses') ?></h3>
@@ -31,8 +35,10 @@
                 			<td><?= h($warehouse->project_name) ?></td>
                 			<td>
                     			<?= $this->Html->link('', ['action' => 'view', $warehouse->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-					            <?= $this->Html->link('', ['action' => 'edit', $warehouse->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
-					            <?= $this->Form->postLink('', ['action' => 'delete', $warehouse->id], ['confirm' => __('Are you sure you want to delete # {0}?', $warehouse->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
+					            <?php if ($user_role === 'a'): ?>
+					            	<?= $this->Html->link('', ['action' => 'edit', $warehouse->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					            	<?= $this->Form->postLink('', ['action' => 'delete', $warehouse->id], ['confirm' => __('Are you sure you want to delete # {0}?', $warehouse->id), 'title' => __('Delete'), 'class' => 'btn btn-default glyphicon glyphicon-trash']) ?>
+                				<?php endif; ?>
                 			</td>
 					    </tr>
 					</tbody>

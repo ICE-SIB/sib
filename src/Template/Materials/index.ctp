@@ -1,5 +1,6 @@
 <?php $this->Html->addCrumb(__('Materials')); ?>
 <div class="row">
+<?php if ($user_role !== 'e'): ?>
 	<div class="col-md-3">
 		<div class="panel panel-default">
   			<div class="panel-heading">
@@ -13,6 +14,9 @@
 		</div>
 	</div>
 	<div class="col-md-9">
+<?php else: ?>
+	<div class="col-md-12">
+<?php endif; ?>
 		<h1><?= __('Materials') ?></h1>
 		<div class="panel panel-default">
 			<div class="table-responsive">
@@ -33,7 +37,9 @@
 			                <td><?= $material->has('unit') ? $material->unit->symbol : '' ?></td>
 			                <td class="actions">
 			                    <?= $this->Html->link('', ['action' => 'view', $material->id], ['title' => __('View'), 'class' => 'btn btn-default glyphicon glyphicon-eye-open']) ?>
-					            <?= $this->Html->link('', ['action' => 'edit', $material->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+					            <?php if ($user_role !== 'e'): ?>
+					            	<?= $this->Html->link('', ['action' => 'edit', $material->id], ['title' => __('Edit'), 'class' => 'btn btn-default glyphicon glyphicon-pencil']) ?>
+			                	<?php endif; ?>
 			                </td>
 					    </tr>
 					</tbody>
