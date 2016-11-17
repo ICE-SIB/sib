@@ -78,4 +78,3 @@ CREATE TABLE public.withdrawals (
     datetime timestamp NOT NULL DEFAULT now(),
     CONSTRAINT withdrawal_positive_quantity CHECK (quantity > 0)
 );
-
