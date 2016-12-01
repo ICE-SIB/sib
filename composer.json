@@ -11,7 +11,8 @@
         "cakephp/migrations": "~1.0",
         "cakephp/plugin-installer": "*",
         "friendsofcake/bootstrap-ui": "^0.5.0",
-        "friendsofcake/search": "^2.1"
+        "friendsofcake/search": "^2.1",
+        "friendsofcake/CakePdf": "^3.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",

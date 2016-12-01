@@ -14,6 +14,12 @@ use ErrorException;
 class WithdrawalsController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+
+        $this->loadComponent('RequestHandler');
+    }
+
     /**
      * Index method
      *
@@ -71,12 +77,26 @@ class WithdrawalsController extends AppController
         $this->set(compact('withdrawal', 'users', 'inventories'));
         $this->set('_serialize', ['withdrawal']);
     }
-   
+
+    public function form($id = null) {
+
+        $withdrawal = $this->Withdrawals->get($id,
+            ['contain' => ['Inventories.Materials.Units']]);
+
+        $this->viewBuilder()->options([
+            'pdfConfig' => [
+                'filename' => __('form_') . $id . '.pdf'
+            ]
+        ]);
+
+        $this->set('withdrawal', $withdrawal);
+    }
+
     public function isAuthorized($user = null) {
-    
-    	if (in_array($this->request['action'], ['add']) && $user['role'] === 'e')
-    		return parent::isAuthorized($user);
-    		else
-    			return true;
+
+        if (in_array($this->request['action'], ['add']) && $user['role'] === 'e')
+            return parent::isAuthorized($user);
+        else
+            return true;
     }
 }

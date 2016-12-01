@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-10-04 04:43+0000\n"
+"POT-Creation-Date: 2016-12-01 14:07+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -106,12 +106,16 @@ msgstr ""
 msgid "The warehouse could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/WithdrawalsController.php:61
+#: Controller/WithdrawalsController.php:67
 msgid "The withdrawal has been saved."
 msgstr ""
 
-#: Controller/WithdrawalsController.php:66
+#: Controller/WithdrawalsController.php:72
 msgid "The withdrawal could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/WithdrawalsController.php:88
+msgid "form_"
 msgstr ""
 
 #: Model/Entity/Machine.php:41
@@ -152,13 +156,13 @@ msgid "This username is already taken"
 msgstr ""
 
 #: Template/Deposits/add.ctp:1
-#: Template/Deposits/index.ctp:1;18
+#: Template/Deposits/index.ctp:1;22
 #: Template/Pages/home.ctp:14
 msgid "Deposits"
 msgstr ""
 
 #: Template/Deposits/add.ctp:2;4
-#: Template/Deposits/index.ctp:10
+#: Template/Deposits/index.ctp:11
 msgid "New Deposit"
 msgstr ""
 
@@ -178,10 +182,10 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: Template/Deposits/index.ctp:6
-#: Template/Inventories/index.ctp:6
+#: Template/Deposits/index.ctp:7
+#: Template/Inventories/index.ctp:7
 #: Template/Inventories/view.ctp:7
-#: Template/MachineDeployments/index.ctp:6
+#: Template/MachineDeployments/index.ctp:7
 #: Template/Machines/index.ctp:9
 #: Template/Machines/view.ctp:7
 #: Template/Materials/edit.ctp:8
@@ -191,9 +195,9 @@ msgstr ""
 #: Template/Users/index.ctp:6
 #: Template/Users/view.ctp:7
 #: Template/Warehouses/edit.ctp:8
-#: Template/Warehouses/index.ctp:6
+#: Template/Warehouses/index.ctp:7
 #: Template/Warehouses/view.ctp:7
-#: Template/Withdrawals/index.ctp:6
+#: Template/Withdrawals/index.ctp:7
 msgid "Menu"
 msgstr ""
 
@@ -211,14 +215,14 @@ msgstr ""
 
 #: Template/Inventories/add.ctp:1
 #: Template/Inventories/edit.ctp:1
-#: Template/Inventories/index.ctp:1;18
+#: Template/Inventories/index.ctp:1;22
 #: Template/Inventories/view.ctp:1
 #: Template/Pages/home.ctp:13
 msgid "Inventories"
 msgstr ""
 
 #: Template/Inventories/add.ctp:2;4
-#: Template/Inventories/index.ctp:10
+#: Template/Inventories/index.ctp:11
 msgid "New Inventory"
 msgstr ""
 
@@ -227,29 +231,29 @@ msgstr ""
 msgid "Edit Inventory"
 msgstr ""
 
-#: Template/Inventories/index.ctp:32
-#: Template/MachineDeployments/index.ctp:30
+#: Template/Inventories/index.ctp:36
+#: Template/MachineDeployments/index.ctp:34
 #: Template/Machines/index.ctp:45
 #: Template/Materials/index.ctp:29
 #: Template/Users/index.ctp:28
-#: Template/Warehouses/index.ctp:25
+#: Template/Warehouses/index.ctp:29
 msgid "Actions"
 msgstr ""
 
-#: Template/Inventories/index.ctp:47
-#: Template/MachineDeployments/index.ctp:43
+#: Template/Inventories/index.ctp:51
+#: Template/MachineDeployments/index.ctp:47
 #: Template/Machines/index.ctp:57
 #: Template/Materials/index.ctp:39
 #: Template/Users/index.ctp:39
-#: Template/Warehouses/index.ctp:33
+#: Template/Warehouses/index.ctp:37
 msgid "View"
 msgstr ""
 
-#: Template/Inventories/index.ctp:48
+#: Template/Inventories/index.ctp:53
 #: Template/Machines/index.ctp:59
 #: Template/Materials/index.ctp:41
 #: Template/Users/index.ctp:40
-#: Template/Warehouses/index.ctp:34
+#: Template/Warehouses/index.ctp:39
 msgid "Edit"
 msgstr ""
 
@@ -295,13 +299,13 @@ msgid "Home"
 msgstr ""
 
 #: Template/MachineDeployments/add.ctp:2
-#: Template/MachineDeployments/index.ctp:1;18
+#: Template/MachineDeployments/index.ctp:1;22
 #: Template/Pages/home.ctp:16
 msgid "Machine Deployments"
 msgstr ""
 
 #: Template/MachineDeployments/add.ctp:3;6
-#: Template/MachineDeployments/index.ctp:10
+#: Template/MachineDeployments/index.ctp:11
 msgid "New Machine Deployment"
 msgstr ""
 
@@ -435,6 +439,7 @@ msgstr ""
 
 #: Template/Materials/add.ctp:2;4
 #: Template/Materials/index.ctp:11
+#: Template/Warehouses/index.ctp:11
 msgid "New Material"
 msgstr ""
 
@@ -453,7 +458,7 @@ msgstr ""
 #: Template/Users/edit.ctp:12
 #: Template/Users/view.ctp:12
 #: Template/Warehouses/edit.ctp:12
-#: Template/Warehouses/index.ctp:35
+#: Template/Warehouses/index.ctp:40
 #: Template/Warehouses/view.ctp:12
 msgid "Are you sure you want to delete # {0}?"
 msgstr ""
@@ -462,12 +467,13 @@ msgstr ""
 #: Template/Pages/home.ctp:6
 #: Template/Warehouses/add.ctp:1
 #: Template/Warehouses/edit.ctp:1
-#: Template/Warehouses/index.ctp:1;18
+#: Template/Warehouses/index.ctp:1;22
 #: Template/Warehouses/view.ctp:1
 msgid "Warehouses"
 msgstr ""
 
 #: Template/Materials/view.ctp:25
+#: Template/Withdrawals/pdf/form.ctp:31
 msgid "Unit"
 msgstr ""
 
@@ -481,7 +487,7 @@ msgstr ""
 
 #: Template/Pages/home.ctp:15
 #: Template/Withdrawals/add.ctp:1
-#: Template/Withdrawals/index.ctp:1;18
+#: Template/Withdrawals/index.ctp:1;22
 msgid "Withdrawals"
 msgstr ""
 
@@ -530,7 +536,6 @@ msgid "Username"
 msgstr ""
 
 #: Template/Warehouses/add.ctp:2;4
-#: Template/Warehouses/index.ctp:10
 msgid "New Warehouse"
 msgstr ""
 
@@ -544,7 +549,7 @@ msgstr ""
 msgid "Delete Warehouse"
 msgstr ""
 
-#: Template/Warehouses/index.ctp:35
+#: Template/Warehouses/index.ctp:40
 msgid "Delete"
 msgstr ""
 
@@ -553,8 +558,124 @@ msgid "Project Name"
 msgstr ""
 
 #: Template/Withdrawals/add.ctp:2;4
-#: Template/Withdrawals/index.ctp:10
+#: Template/Withdrawals/index.ctp:11
 msgid "New Withdrawal"
+msgstr ""
+
+#: Template/Withdrawals/index.ctp:43
+msgid "Dispatch Guide & Authorization Form"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:16
+msgid "Dispatch Guide"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:19
+msgid "ID: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:20;78
+msgid "Date: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:21
+msgid "Dispatching: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:22
+msgid "Receiving: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:23
+msgid "Consigned To: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:24
+msgid "Withdrawn By: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:25;85
+msgid "Vehicle No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:30
+msgid "Quantity"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:32
+msgid "Article"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:33
+msgid "Document No."
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:45
+msgid "Dispatched By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:50
+msgid "Withdrawn By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:57
+msgid "Recieved at Place By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:62
+msgid "Withdrawn at Place By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:69
+msgid "Recieved Correctly (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:75
+msgid "Materials & Equipment Withdraw Authorization"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:79
+msgid "Asset No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:80
+msgid "Employee Withdrawing: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:81
+msgid "Working Location: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:82
+msgid "Description of Material or Equipment: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:83
+msgid "Dispatch Guide No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:84
+msgid "Destiny: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:88
+msgid "Manager Authorizing"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:89
+msgid "Name: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:90;96
+msgid "Signature: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:94
+msgid "Employee Withdrawing"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:95
+msgid "Identification Number: "
 msgstr ""
 
 #: Template/Error/error400.ctp:36

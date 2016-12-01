@@ -223,3 +223,6 @@ Type::build('datetime')
 Plugin::load('BootstrapUI');
 
 Plugin::load('Search');
+
+Plugin::load('CakePdf', ['bootstrap' => true]);
+Configure::load('pdf');
