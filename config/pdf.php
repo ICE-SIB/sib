@@ -1,8 +1,10 @@
 <?php 
 return [
     'CakePdf' => [
-        'engine' => 'CakePdf.WkHtmlToPdf',
-        'binary' => '/usr/bin/wkhtmltopdf',
+        'engine' => [
+            'className' => 'CakePdf.WkHtmlToPdf',
+            'binary' => '/usr/bin/wkhtmltopdf'
+        ],
         'pageSize' => 'Letter',
         'download' => true
     ]
