@@ -1,0 +1,693 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-12-01 14:07+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AppController.php:86
+msgid "Unauthorized access."
+msgstr ""
+
+#: Controller/DepositsController.php:61
+msgid "The deposit has been saved."
+msgstr ""
+
+#: Controller/DepositsController.php:66
+msgid "The deposit could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/InventoriesController.php:59;86
+msgid "The inventory has been saved."
+msgstr ""
+
+#: Controller/InventoriesController.php:62;89
+msgid "The inventory could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MachineDeploymentsController.php:82
+msgid "The machine deployment could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MachineDeploymentsController.php:85
+msgid "This machine is already in that location."
+msgstr ""
+
+#: Controller/MachineDeploymentsController.php:87
+msgid "This machine is currently in use."
+msgstr ""
+
+#: Controller/MachineDeploymentsController.php:96
+msgid "The machine deployment has been saved."
+msgstr ""
+
+#: Controller/MachinesController.php:61;89
+msgid "The machine has been saved."
+msgstr ""
+
+#: Controller/MachinesController.php:65;93
+msgid "The machine could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/MachinesController.php:113
+msgid "The machine has been deleted."
+msgstr ""
+
+#: Controller/MachinesController.php:115
+msgid "The machine could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/MaterialsController.php:58;85
+msgid "The material has been saved."
+msgstr ""
+
+#: Controller/MaterialsController.php:62;89
+msgid "The material could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:59;85
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:62;88
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:104
+msgid "Your username or password is incorrect."
+msgstr ""
+
+#: Controller/UsersController.php:112
+msgid "You are now logged out."
+msgstr ""
+
+#: Controller/WarehousesController.php:55;80
+msgid "The warehouse has been saved."
+msgstr ""
+
+#: Controller/WarehousesController.php:58;83
+msgid "The warehouse could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/WarehousesController.php:102
+msgid "The warehouse has been deleted."
+msgstr ""
+
+#: Controller/WarehousesController.php:104
+msgid "The warehouse could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/WithdrawalsController.php:67
+msgid "The withdrawal has been saved."
+msgstr ""
+
+#: Controller/WithdrawalsController.php:72
+msgid "The withdrawal could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/WithdrawalsController.php:88
+msgid "form_"
+msgstr ""
+
+#: Model/Entity/Machine.php:41
+#: Model/Entity/MachineDeployment.php:46
+#: Model/Table/MachineDeploymentsTable.php:123
+#: Model/Table/MachinesTable.php:118
+msgid "Hourly"
+msgstr ""
+
+#: Model/Entity/Machine.php:44
+#: Model/Entity/MachineDeployment.php:49
+#: Model/Table/MachineDeploymentsTable.php:124
+#: Model/Table/MachinesTable.php:119
+msgid "Daily"
+msgstr ""
+
+#: Model/Entity/MachineDeployment.php:40
+msgid "{0}'s Deployment"
+msgstr ""
+
+#: Model/Entity/User.php:54
+#: Model/Table/UsersTable.php:107
+msgid "Administrator"
+msgstr ""
+
+#: Model/Entity/User.php:57
+#: Model/Table/UsersTable.php:108
+msgid "Operator"
+msgstr ""
+
+#: Model/Entity/User.php:60
+#: Model/Table/UsersTable.php:109
+msgid "Employee"
+msgstr ""
+
+#: Model/Table/UsersTable.php:82
+msgid "This username is already taken"
+msgstr ""
+
+#: Template/Deposits/add.ctp:1
+#: Template/Deposits/index.ctp:1;22
+#: Template/Pages/home.ctp:14
+msgid "Deposits"
+msgstr ""
+
+#: Template/Deposits/add.ctp:2;4
+#: Template/Deposits/index.ctp:11
+msgid "New Deposit"
+msgstr ""
+
+#: Template/Deposits/add.ctp:9
+#: Template/Inventories/add.ctp:14
+#: Template/Inventories/edit.ctp:15
+#: Template/MachineDeployments/add.ctp:13
+#: Template/Machines/add.ctp:12
+#: Template/Machines/edit.ctp:12
+#: Template/Materials/add.ctp:9
+#: Template/Materials/edit.ctp:24
+#: Template/Users/add.ctp:13
+#: Template/Users/edit.ctp:29
+#: Template/Warehouses/add.ctp:6
+#: Template/Warehouses/edit.ctp:21
+#: Template/Withdrawals/add.ctp:9
+msgid "Submit"
+msgstr ""
+
+#: Template/Deposits/index.ctp:7
+#: Template/Inventories/index.ctp:7
+#: Template/Inventories/view.ctp:7
+#: Template/MachineDeployments/index.ctp:7
+#: Template/Machines/index.ctp:9
+#: Template/Machines/view.ctp:7
+#: Template/Materials/edit.ctp:8
+#: Template/Materials/index.ctp:7
+#: Template/Materials/view.ctp:7
+#: Template/Users/edit.ctp:8
+#: Template/Users/index.ctp:6
+#: Template/Users/view.ctp:7
+#: Template/Warehouses/edit.ctp:8
+#: Template/Warehouses/index.ctp:7
+#: Template/Warehouses/view.ctp:7
+#: Template/Withdrawals/index.ctp:7
+msgid "Menu"
+msgstr ""
+
+#: Template/Element/navbar.ctp:4
+msgid "Inventory Management System"
+msgstr ""
+
+#: Template/Element/navbar.ctp:14
+msgid "Manual"
+msgstr ""
+
+#: Template/Element/navbar.ctp:16
+msgid "Sign Out"
+msgstr ""
+
+#: Template/Inventories/add.ctp:1
+#: Template/Inventories/edit.ctp:1
+#: Template/Inventories/index.ctp:1;22
+#: Template/Inventories/view.ctp:1
+#: Template/Pages/home.ctp:13
+msgid "Inventories"
+msgstr ""
+
+#: Template/Inventories/add.ctp:2;4
+#: Template/Inventories/index.ctp:11
+msgid "New Inventory"
+msgstr ""
+
+#: Template/Inventories/edit.ctp:3;5
+#: Template/Inventories/view.ctp:11
+msgid "Edit Inventory"
+msgstr ""
+
+#: Template/Inventories/index.ctp:36
+#: Template/MachineDeployments/index.ctp:34
+#: Template/Machines/index.ctp:45
+#: Template/Materials/index.ctp:29
+#: Template/Users/index.ctp:28
+#: Template/Warehouses/index.ctp:29
+msgid "Actions"
+msgstr ""
+
+#: Template/Inventories/index.ctp:51
+#: Template/MachineDeployments/index.ctp:47
+#: Template/Machines/index.ctp:57
+#: Template/Materials/index.ctp:39
+#: Template/Users/index.ctp:39
+#: Template/Warehouses/index.ctp:37
+msgid "View"
+msgstr ""
+
+#: Template/Inventories/index.ctp:53
+#: Template/Machines/index.ctp:59
+#: Template/Materials/index.ctp:41
+#: Template/Users/index.ctp:40
+#: Template/Warehouses/index.ctp:39
+msgid "Edit"
+msgstr ""
+
+#: Template/Inventories/view.ctp:20
+msgid "Material"
+msgstr ""
+
+#: Template/Inventories/view.ctp:24
+#: Template/Machines/view.ctp:20
+msgid "Warehouse"
+msgstr ""
+
+#: Template/Inventories/view.ctp:28
+msgid "Stock"
+msgstr ""
+
+#: Template/Inventories/view.ctp:32
+msgid "Area"
+msgstr ""
+
+#: Template/Inventories/view.ctp:36
+msgid "Shelf"
+msgstr ""
+
+#: Template/Inventories/view.ctp:40
+msgid "Body"
+msgstr ""
+
+#: Template/Inventories/view.ctp:44
+msgid "Side"
+msgstr ""
+
+#: Template/Inventories/view.ctp:48
+msgid "Platter"
+msgstr ""
+
+#: Template/Inventories/view.ctp:52
+msgid "Additional Notes"
+msgstr ""
+
+#: Template/Layout/default.ctp:24
+msgid "Home"
+msgstr ""
+
+#: Template/MachineDeployments/add.ctp:2
+#: Template/MachineDeployments/index.ctp:1;22
+#: Template/Pages/home.ctp:16
+msgid "Machine Deployments"
+msgstr ""
+
+#: Template/MachineDeployments/add.ctp:3;6
+#: Template/MachineDeployments/index.ctp:11
+msgid "New Machine Deployment"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:2
+msgid "Machine Deployment"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:8
+msgid "User"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:12
+msgid "Machine"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:16
+msgid "Origin"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:20
+msgid "Destination"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:24
+#: Template/Machines/view.ctp:51
+msgid "Responsible"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:28
+#: Template/Machines/view.ctp:52
+msgid "Management Center"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:32
+#: Template/Machines/view.ctp:53
+msgid "Service Order"
+msgstr ""
+
+#: Template/MachineDeployments/view.ctp:36
+#: Template/Machines/view.ctp:54
+msgid "Datetime"
+msgstr ""
+
+#: Template/Machines/add.ctp:1
+#: Template/Machines/edit.ctp:1
+#: Template/Machines/index.ctp:1;34
+#: Template/Machines/view.ctp:1
+#: Template/Pages/home.ctp:8
+msgid "Machines"
+msgstr ""
+
+#: Template/Machines/add.ctp:2;4
+#: Template/Machines/index.ctp:13
+msgid "New Machine"
+msgstr ""
+
+#: Template/Machines/edit.ctp:3;5
+#: Template/Machines/view.ctp:11
+msgid "Edit Machine"
+msgstr ""
+
+#: Template/Machines/index.ctp:25
+msgid "Name - Project"
+msgstr ""
+
+#: Template/Machines/index.ctp:26
+msgid "Search"
+msgstr ""
+
+#: Template/Machines/index.ctp:27
+msgid "Reset"
+msgstr ""
+
+#: Template/Machines/index.ctp:55
+#: Template/Machines/view.ctp:37
+msgid "Yes"
+msgstr ""
+
+#: Template/Machines/index.ctp:55
+#: Template/Machines/view.ctp:37
+msgid "No"
+msgstr ""
+
+#: Template/Machines/view.ctp:24
+#: Template/Materials/view.ctp:21
+msgid "Name"
+msgstr ""
+
+#: Template/Machines/view.ctp:28
+msgid "Asset Number"
+msgstr ""
+
+#: Template/Machines/view.ctp:32
+msgid "Rate Type"
+msgstr ""
+
+#: Template/Machines/view.ctp:36
+msgid "Is Active"
+msgstr ""
+
+#: Template/Machines/view.ctp:40
+msgid "Description"
+msgstr ""
+
+#: Template/Machines/view.ctp:43
+msgid "Related Machine Deployments"
+msgstr ""
+
+#: Template/Machines/view.ctp:47
+msgid "User Id"
+msgstr ""
+
+#: Template/Machines/view.ctp:48
+msgid "Machine Id"
+msgstr ""
+
+#: Template/Machines/view.ctp:49
+msgid "From Warehouse"
+msgstr ""
+
+#: Template/Machines/view.ctp:50
+msgid "To Warehouse"
+msgstr ""
+
+#: Template/Materials/add.ctp:1
+#: Template/Materials/edit.ctp:1
+#: Template/Materials/index.ctp:1;20
+#: Template/Pages/home.ctp:7
+msgid "Materials"
+msgstr ""
+
+#: Template/Materials/add.ctp:2;4
+#: Template/Materials/index.ctp:11
+#: Template/Warehouses/index.ctp:11
+msgid "New Material"
+msgstr ""
+
+#: Template/Materials/edit.ctp:3;19
+#: Template/Materials/view.ctp:11
+msgid "Edit Material"
+msgstr ""
+
+#: Template/Materials/edit.ctp:12
+#: Template/Materials/view.ctp:12
+msgid "Delete Material"
+msgstr ""
+
+#: Template/Materials/edit.ctp:12
+#: Template/Materials/view.ctp:12
+#: Template/Users/edit.ctp:12
+#: Template/Users/view.ctp:12
+#: Template/Warehouses/edit.ctp:12
+#: Template/Warehouses/index.ctp:40
+#: Template/Warehouses/view.ctp:12
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Materials/view.ctp:1
+#: Template/Pages/home.ctp:6
+#: Template/Warehouses/add.ctp:1
+#: Template/Warehouses/edit.ctp:1
+#: Template/Warehouses/index.ctp:1;22
+#: Template/Warehouses/view.ctp:1
+msgid "Warehouses"
+msgstr ""
+
+#: Template/Materials/view.ctp:25
+#: Template/Withdrawals/pdf/form.ctp:31
+msgid "Unit"
+msgstr ""
+
+#: Template/Materials/view.ctp:29
+msgid "Code"
+msgstr ""
+
+#: Template/Pages/home.ctp:2
+msgid "Welcome, {0}"
+msgstr ""
+
+#: Template/Pages/home.ctp:15
+#: Template/Withdrawals/add.ctp:1
+#: Template/Withdrawals/index.ctp:1;22
+msgid "Withdrawals"
+msgstr ""
+
+#: Template/Pages/home.ctp:21
+#: Template/Users/add.ctp:2
+#: Template/Users/edit.ctp:1
+#: Template/Users/index.ctp:1;18
+#: Template/Users/view.ctp:1
+msgid "Users"
+msgstr ""
+
+#: Template/Users/add.ctp:3;6
+#: Template/Users/index.ctp:10
+msgid "New User"
+msgstr ""
+
+#: Template/Users/edit.ctp:3;19
+#: Template/Users/view.ctp:11
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/edit.ctp:12
+#: Template/Users/view.ctp:12
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/edit.ctp:21
+#: Template/Users/view.ctp:33
+msgid "Role"
+msgstr ""
+
+#: Template/Users/login.ctp:3;7
+msgid "Sign In"
+msgstr ""
+
+#: Template/Users/view.ctp:21
+msgid "First Name"
+msgstr ""
+
+#: Template/Users/view.ctp:25
+msgid "Last Name"
+msgstr ""
+
+#: Template/Users/view.ctp:29
+msgid "Username"
+msgstr ""
+
+#: Template/Warehouses/add.ctp:2;4
+msgid "New Warehouse"
+msgstr ""
+
+#: Template/Warehouses/edit.ctp:3;19
+#: Template/Warehouses/view.ctp:11
+msgid "Edit Warehouse"
+msgstr ""
+
+#: Template/Warehouses/edit.ctp:12
+#: Template/Warehouses/view.ctp:12
+msgid "Delete Warehouse"
+msgstr ""
+
+#: Template/Warehouses/index.ctp:40
+msgid "Delete"
+msgstr ""
+
+#: Template/Warehouses/view.ctp:21
+msgid "Project Name"
+msgstr ""
+
+#: Template/Withdrawals/add.ctp:2;4
+#: Template/Withdrawals/index.ctp:11
+msgid "New Withdrawal"
+msgstr ""
+
+#: Template/Withdrawals/index.ctp:43
+msgid "Dispatch Guide & Authorization Form"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:16
+msgid "Dispatch Guide"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:19
+msgid "ID: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:20;78
+msgid "Date: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:21
+msgid "Dispatching: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:22
+msgid "Receiving: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:23
+msgid "Consigned To: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:24
+msgid "Withdrawn By: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:25;85
+msgid "Vehicle No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:30
+msgid "Quantity"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:32
+msgid "Article"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:33
+msgid "Document No."
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:45
+msgid "Dispatched By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:50
+msgid "Withdrawn By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:57
+msgid "Recieved at Place By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:62
+msgid "Withdrawn at Place By (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:69
+msgid "Recieved Correctly (Name & Signature)"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:75
+msgid "Materials & Equipment Withdraw Authorization"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:79
+msgid "Asset No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:80
+msgid "Employee Withdrawing: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:81
+msgid "Working Location: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:82
+msgid "Description of Material or Equipment: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:83
+msgid "Dispatch Guide No.: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:84
+msgid "Destiny: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:88
+msgid "Manager Authorizing"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:89
+msgid "Name: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:90;96
+msgid "Signature: "
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:94
+msgid "Employee Withdrawing"
+msgstr ""
+
+#: Template/Withdrawals/pdf/form.ctp:95
+msgid "Identification Number: "
+msgstr ""
+
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr ""
+
+#: Template/Error/error400.ctp:38
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr ""
+

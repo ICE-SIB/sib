@@ -1,0 +1,11 @@
+.required > label:after {
+    content: ' *';
+    color: #C3232D;
+}
+
+.asc:after {
+    content: " \2193";
+}
+.desc:after {
+    content: " \2191";
+}

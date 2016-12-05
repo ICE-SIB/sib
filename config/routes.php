@@ -71,7 +71,21 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
+
     $routes->fallbacks('DashedRoute');
+});
+
+Router::scope('/login', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
+});
+
+Router::scope('/logout', function (RouteBuilder $routes) {
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'logout']);
+});
+
+Router::scope('/withdrawals/form/*', function (RouteBuilder $routes) {
+    $routes->extensions(['pdf']);
+    $routes->connect('/', ['controller' => 'Withdrawals', 'action' => 'form', '_ext' => 'pdf']);
 });
 
 /**

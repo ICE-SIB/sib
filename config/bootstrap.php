@@ -219,3 +219,10 @@ Type::build('date')
     ->useImmutable();
 Type::build('datetime')
     ->useImmutable();
+
+Plugin::load('BootstrapUI');
+
+Plugin::load('Search');
+
+Plugin::load('CakePdf', ['bootstrap' => true]);
+Configure::load('pdf');
