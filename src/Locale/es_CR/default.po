@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-12-01 08:07-0600\n"
-"PO-Revision-Date: 2016-12-01 08:15-0600\n"
+"POT-Creation-Date: 2016-12-07 01:13-0600\n"
+"PO-Revision-Date: 2016-12-07 01:13-0600\n"
 "Last-Translator: \n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: es_CR\n"
@@ -162,6 +162,10 @@ msgstr "Depositos"
 msgid "New Deposit"
 msgstr "Nuevo Deposito"
 
+#: Template/Deposits/add.ctp:6 Template/Withdrawals/add.ctp:6
+msgid "Inventory"
+msgstr "Inventario"
+
 #: Template/Deposits/add.ctp:9 Template/Inventories/add.ctp:14
 #: Template/Inventories/edit.ctp:15 Template/MachineDeployments/add.ctp:13
 #: Template/Machines/add.ctp:12 Template/Machines/edit.ctp:12
@@ -199,7 +203,7 @@ msgstr "Salir"
 #: Template/Inventories/index.ctp:1;22 Template/Inventories/view.ctp:1
 #: Template/Pages/home.ctp:13
 msgid "Inventories"
-msgstr "Inventario"
+msgstr "Inventarios"
 
 #: Template/Inventories/add.ctp:2;4 Template/Inventories/index.ctp:11
 msgid "New Inventory"
