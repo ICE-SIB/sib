@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-12-01 14:07+0000\n"
+"POT-Creation-Date: 2016-12-07 07:12+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -164,6 +164,11 @@ msgstr ""
 #: Template/Deposits/add.ctp:2;4
 #: Template/Deposits/index.ctp:11
 msgid "New Deposit"
+msgstr ""
+
+#: Template/Deposits/add.ctp:6
+#: Template/Withdrawals/add.ctp:6
+msgid "Inventory"
 msgstr ""
 
 #: Template/Deposits/add.ctp:9
