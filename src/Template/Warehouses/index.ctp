@@ -8,7 +8,7 @@
   			</div>
   			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
-					<li role="presentation"><?= $this->Html->link(__('New Material'), ['action' => 'add']) ?></li>
+					<li role="presentation"><?= $this->Html->link(__('New Warehouse'), ['action' => 'add']) ?></li>
 				</ul>
  			</div>
 		</div>

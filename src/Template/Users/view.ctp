@@ -9,7 +9,6 @@
   			<div class="panel-body">
 				<ul class="nav nav-pills nav-stacked">
 					<li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-					<li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
 				</ul>
  			</div>
 		</div>

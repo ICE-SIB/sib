@@ -16,7 +16,7 @@
 	        		$sign_out = __('Sign Out'); ?>
 	        		<li><?= $this->Html->link($this->Html->icon('log-out') . " $sign_out", ['controller' => 'Users', 'action' => 'logout'], ['escape' => false]) ?></li>
 	        	<?php endif; ?>
-	        	<li><?= $this->Html->link($this->Html->icon('book') . " $manual", 'https://ice-sib.github.io/sib', ['escape' => false]) ?></li>
+	        	<li><?= $this->Html->link($this->Html->icon('book') . " $manual", ['controller' => 'App', 'action' => 'getManual'], ['escape' => false]) ?></li>
 	      	</ul>
 	      	<?php if ($user_username): ?>
 	      		<p class="navbar-text navbar-right"><?= $this->Html->icon('user') . " $user_fullname ($user_username)" ?></p>

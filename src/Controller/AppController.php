@@ -77,6 +77,11 @@ class AppController extends Controller
         $this->set($user);        
         parent::beforeFilter($event);
     }
+
+    public function getManual() {
+        $this->response->file(ROOT . DS . 'docs/manual.pdf', ['download' => true]);
+        return $this->response;
+    }
     
     public function isAuthorized($user = null) { 
     	

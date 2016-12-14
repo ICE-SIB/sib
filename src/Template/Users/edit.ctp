@@ -2,18 +2,6 @@
 <?php $this->Html->addCrumb(h($user->full_name), ['action' => 'view', $user->id]); ?>
 <?php $this->Html->addCrumb(__('Edit User')); ?>
 <div class="row">
-	<div class="col-md-3">
-		<div class="panel panel-default">
-  			<div class="panel-heading">
-   				<h1 class="panel-title"><?= __('Menu') ?></h1>
-  			</div>
-  			<div class="panel-body">
-				<ul class="nav nav-pills nav-stacked">
-					<li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?></li>
-				</ul>
- 			</div>
-		</div>
-	</div>
 	<div class="col-md-9">
 		<?= $this->Form->create($user) ?>
 	    <h1><?= __('Edit User') ?></h1>
